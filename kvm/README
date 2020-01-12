@@ -1,0 +1,6 @@
+arch/x86/include/asm/kvm_host.h
+include/uapi/linux/kvm.h
+arch/x86/kvm/x86.c
+arch/x86/kvm/vmx.c
+virt/kvm/kvm_main.c
+virt/kvm/imee.{c,h}

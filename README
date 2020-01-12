@@ -1,0 +1,5 @@
+1. Use linux_3.13.0.orig.tar.gz and linux_3.13.0-106.153.diff to get
+the kernel source tree. Install the kernel from the source tree. If you already have an installed linux_3.13.0 and its source tree, ignore this step.
+2. Copy the *.c and *.h files in kvm/ into the kernel source tree, the corresponding paths are indicated in kvm/README.
+3. Run ./dep.sh under kernel source tree to re-compile and re-install kvm.ko and kvm_intel.ko. 
+4. scan_tool_sync/src/main.c contains the source code of VMI app. scan_tool_sync/lib/hyp.c contains the source code of imee agent. make under scan_tool_sync/ to generate executable imee. Run ./imee 0x0 to start introspecting kernel objects from target VM. 
