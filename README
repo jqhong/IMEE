@@ -1,7 +1,7 @@
 The host is a Ubuntu 14.04, 64-bit linux-3.13.0. Follow step 1-3 to install and re-compile the host's kernel. 
-1. Use linux_3.13.0.orig.tar.gz and linux_3.13.0-106.153.diff to get
+1. Use linux_3.13.0.orig.tar.gz and linux_3.13.0-106.153.diff under release to get
 the host's kernel source tree. Install the kernel from the source tree. If you already have an installed linux_3.13.0 and its source tree, ignore this step.
-2. Copy the *.c and *.h files in kvm/ into the kernel source tree, the corresponding paths are indicated in kvm/README.
+2. Copy the *.c and *.h files in kvm/ into the kernel source tree, the corresponding paths are indicated in kvm/README. Add $(KVM)/imee.o before $(KVM)/kvm_main.o into the file arch/x86/kvm/Makefile under kernel source tree. 
 3. Run ./dep.sh under kernel source tree to re-compile and re-install kvm.ko and kvm_intel.ko. 
 
 The guest is a 32-bit linux kernel, there is no modification on the Guest kernel. 
